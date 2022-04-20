@@ -38,7 +38,7 @@ export default function Register() {
       } else {
         localStorage.setItem("chat-app-user", JSON.stringify(data.user));
       }
-      navigate("/");
+      navigate("/setavatar");
     }
   };
 
@@ -66,12 +66,12 @@ export default function Register() {
     setValue({ ...value, [e.target.name]: e.target.value });
   };
 
-  useEffect(() => {
-    console.log(localStorage.getItem("chat-app-user"));
-    if (localStorage.getItem("chat-app-user")) {
-      navigate("/chat");
-    }
-  }, []);
+  // useEffect(() => {
+  //   console.log(localStorage.getItem("chat-app-user"));
+  //   if (localStorage.getItem("chat-app-user")) {
+  //     navigate("/chat");
+  //   }
+  // }, []);
   return (
     <>
       <FormContainer>
