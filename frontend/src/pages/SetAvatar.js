@@ -24,7 +24,7 @@ export default function SetAvatar() {
     theme: "dark",
   };
 
-  useEffect(async () => {
+  useEffect(() => {
     if (!localStorage.getItem("chat-app-user")) navigate("/login");
   }, []);
 
@@ -36,6 +36,7 @@ export default function SetAvatar() {
       );
       const buffer = new Buffer(image.data);
       data.push(buffer.toString("base64"));
+      // console.log(buffer.toString("base64"));
     }
     setAvatars(data);
     setIsLoading(false);
